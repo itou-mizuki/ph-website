@@ -1,0 +1,21 @@
+let text = document.getElementById("text");
+console.log(text);
+text.innerHTML = "POSSEとは - Edited";
+let midasi = document.querySelector(".midasi2");
+console.log(midasi);
+midasi.innerHTML = "About POSSE - Edited";
+let events = document.getElementsByClassName("midasi1");
+console.log(events);
+events[1].style.color = "#FF0000";
+let day = document.getElementsByClassName("midasi2");
+console.log(day);
+day[2].style.fontSize = "10px";
+let li = document.createElement("li");
+li.textContent = "テスト見出し";
+let div = document.getElementById("test");
+div.appendChild(li);
+const button = document.getElementById("button");
+const menu = document.getElementsByClassName(".nav");
+button.addEventListener("click", function () {
+  menu.classList.toggle("nav-js");
+});

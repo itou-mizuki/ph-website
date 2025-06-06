@@ -1,0 +1,437 @@
+/**
+* File Name : style.css
+* Version : 1.0
+* Description : POSSE課題 完成版
+* Since : 2023-05-07
+*
+* ---- Table of Contents ----
+*
+* 1.0 - Common
+*    1.1 - カスタムプロパティ
+*    1.2 - ベーススタイル
+*    1.3 - 汎用スタイル
+*
+* 2.0 - Sections
+*    2.1 - ヘッダー
+*    2.2 - フッター
+*    2.3 - メインビジュアル
+*    2.4 - POSSEとは
+*    2.5 - イベント
+*    2.6 - 日常生活
+*    2.7 - 公式LINE
+*
+* 3.0 - Animation, JavaScript Object
+*    3.1 - フェードイン
+*    3.2 - スライダー
+*
+*/
+
+/* 1.0 - Common */
+/* ============================================ */
+hr {
+  display: block !important;
+  height: 0; /* 高さをゼロにしない */
+  border: none;
+  border-top: 1px solid #adadad;
+  width: 100%;
+}
+/**
+ * 1.1 - カスタムプロパティ
+ *
+ * https://developer.mozilla.org/ja/docs/Web/CSS/Using_CSS_custom_properties
+ */
+
+/**
+ * 1.2 - ベーススタイル
+ */
+body {
+  color: #333333;
+}
+
+/**
+ * 1.3 - 汎用スタイル
+ */
+.fonts {
+  font-family: "Noto Sans JP", "Plus Jakarta Sans";
+}
+/* 2.0 - Sections */
+/* ============================================ */
+
+/**
+ * 2.1 - ヘッダー
+ */
+.main-header {
+  display: flex;
+  align-items: center; /* 垂直方向に中央揃え */
+  justify-content: space-between; /* ロゴとnavを両端に配置 */
+  padding-left: 24px;
+  padding-right: 24px;
+}
+.nav {
+  display: flex;
+}
+.nav1 {
+  display: flex;
+  color: #0071bc;
+  align-items: center;
+}
+.con {
+  margin: 32px;
+  height: 25px;
+  width: auto;
+}
+.nav2 {
+  border-radius: 25px;
+  width: 40px;
+  height: auto;
+  display: flex;
+  align-items: center;
+  margin: 5px;
+}
+.ic {
+  width: 40px;
+  height: 40px;
+}
+.icon {
+  display: flex;
+}
+.icons {
+  display: flex;
+}
+.hamburger {
+  display: none;
+}
+.foot-h {
+  display: none;
+}
+.LINE-botan-h {
+  display: none;
+}
+/**
+ * 2.2 - フッター
+ */
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.foot {
+  margin: 24px;
+  color: #adadad;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/**
+ * 2.3 - メインビジュアル
+ */
+.main {
+  position: relative; /* mainを基準に子要素を配置 */
+  height: 760px;
+  background-image: url("../img/bg-mainvisual.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.main > section {
+  position: absolute; /* mainを基準として絶対配置 */
+  bottom: 0; /* 下端に配置 */
+  left: 0; /* 左端に配置 */
+  padding: 40px; /* 内側の余白 */
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  margin-left: 230px;
+}
+.main-title {
+  margin: 12px;
+  font-size: 24px;
+  font-weight: 700;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 4px;
+  background-color: #ffffff;
+  color: #0071bc;
+}
+.sub-title {
+  background-color: #ffffff;
+  margin: 12px;
+  font-size: 60px;
+  padding-left: 20px;
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+.SCROLL {
+  color: #ffffff;
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+}
+.SCROLL::before {
+  content: "";
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+/**
+ * 2.4 - POSSEとは
+ */
+.sec1 {
+  margin: 80px;
+  margin-left: 230px;
+  margin-right: 230px;
+}
+.midasi {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* 横方向中央揃え */
+  justify-content: center; /* 縦方向中央揃え（必要なら） */
+}
+.midasi1 {
+  font-size: 36px;
+  font-weight: 700;
+  margin: 20px;
+}
+.midasi2 {
+  font-size: 14px;
+  color: #0071bc;
+  font-weight: 700;
+  margin: 10px;
+}
+.setumei {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.about-img {
+  width: 470px;
+  height: 312px;
+  border-radius: 16px; /* 数値を大きくするともっと丸くなります */
+  object-fit: cover; /* 必要なら画像の比率調整に */
+}
+.syousai {
+  display: flex;
+  align-items: center;
+  margin-left: 40px;
+  font-size: 14px;
+  line-height: 180%;
+}
+/**
+ * 2.5 - イベント
+ */
+.lead {
+  font-size: 14px;
+  line-height: 180%;
+  margin-top: 10px;
+  text-align: center;
+}
+.event-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+.event-card {
+  margin: 20px;
+}
+.event-contents {
+  background-color: #f7f9fb;
+  width: 320px;
+  height: 101px;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.event-img {
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  width: 320px;
+  height: 200px;
+}
+.event-date {
+  font-size: 14px;
+  color: #ffffff;
+  background-color: #0071bc;
+  padding: 4px 8px;
+  border-radius: 20px;
+  display: inline-block;
+  margin: 8px;
+}
+.event-title {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+/**
+ * 2.6 - 日常生活
+ */
+.Daily {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 120px;
+  margin-bottom: 80px;
+}
+.Daily-text {
+  padding-left: 56px;
+  padding-right: 56px;
+}
+.Daily-list {
+  justify-content: space-between;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  background-color: #f7f9fb;
+  width: 940px;
+  height: 324px;
+  border-radius: 12px;
+  margin-bottom: 120px;
+}
+.Daily-photo {
+  margin-right: 0;
+  border-radius: 12px;
+  width: 480px;
+  height: 320px;
+  display: flex;
+  margin-top: -44px;
+  margin-right: -40px;
+}
+.Daily-title {
+  display: flex;
+  flex-direction: row;
+  align-items: end;
+}
+.list-num {
+  font-size: 58px;
+  font-weight: 700;
+  color: #0071bc;
+  margin-right: 20px;
+}
+.list-title {
+  font-size: 24px;
+  font-weight: 700;
+  padding-bottom: 10px;
+}
+.list-contents {
+  margin: 8px;
+  font-weight: 700;
+}
+.list-contents::before {
+  content: "\2713";
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  border-radius: 50%;
+  font-size: 26px;
+  background-color: #0071bc;
+  color: #ffffff;
+  font-weight: 700;
+  margin-right: 12px;
+}
+.Daily-contents {
+  line-height: 180%;
+  font-size: 12px;
+}
+.re-Daily-list {
+  justify-content: space-between;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+  background-color: #f7f9fb;
+  width: 940px;
+  height: 324px;
+  border-radius: 12px;
+  margin-bottom: 120px;
+}
+.re-Daily-photo {
+  margin-right: 0;
+  border-radius: 12px;
+  width: 480px;
+  height: 320px;
+  display: flex;
+  margin-top: -44px;
+  margin-left: -40px;
+}
+/**
+ * 2.7 - 公式LINE
+ */
+.LINE-section {
+  background-image: url(../img/bg-cta.jpg);
+  background-size: cover; /* 要素全体にフィット */
+  background-position: center; /* 中央に配置 */
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 50px;
+}
+.LINE-title {
+  margin: 16px;
+  color: #ffffff;
+  margin-top: 60px;
+  display: flex;
+  flex-direction: row;
+}
+.LINE-icon {
+  width: 40px;
+  height: 40px;
+}
+.LINE-text {
+  padding-bottom: 6px;
+  font-size: 36px;
+  font-weight: 700;
+}
+.LINE-contents {
+  text-align: center;
+  font-size: 14px;
+  line-height: 180%;
+  color: #ffffff;
+  padding: 32px;
+  margin-bottom: 30px;
+}
+.LINE-botan {
+  background-color: #ffffff;
+  font-size: 16px;
+  font-weight: 700;
+  color: #0071bc;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  padding-left: 119px;
+  padding-right: 119px;
+  border-radius: 36px;
+}
+.LINE-botan:hover {
+  background-color: #0071bc;
+  color: #ffffff;
+  border-color: #ffffff;
+  box-sizing: border-box;
+  border-width: 2px;
+}
+/* 3.0 - Animation, JavaScript Object */
+/* ============================================ */
+
+/**
+ * 3.1 - フェードイン
+ */
+
+/**
+ * 3.2 - スライダー
+ */

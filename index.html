@@ -5,6 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="./assets/css/reset.css" />
+    <script src="
+https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js
+"></script>
+    <link
+      href="
+https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
+"
+      rel="stylesheet"
+    />
+
     <link rel="stylesheet" href="./assets/css/style.css" />
     <link
       rel="stylesheet"
@@ -23,9 +33,10 @@
       href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
       rel="stylesheet"
     />
+    <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body class="fonts">
-    <header class="main-header">
+    <header class="main-header main-header-clear">
       <a href="index.html" class="main-logo">
         <img src="./assets/img/logo.svg" alt="POSSE" class="main-logo" />
       </a>
@@ -81,7 +92,7 @@
         </ul>
       </nav>
     </header>
-    <main class="main">
+    <main class="main" id="main-visual">
       <section>
         <div class="title">
           <h1 class="main-title">
@@ -111,7 +122,7 @@
           </p>
         </div>
       </section>
-      <section>
+      <section class="event">
         <div class="midasi">
           <p class="midasi1">イベント</p>
           <p class="midasi2">Event</p>
@@ -120,54 +131,56 @@
             プログラミングだけでなく、これらのイベントを共に経験し、仲間との友情はより深まります。
           </p>
         </div>
-        <div class="event">
-          <ul class="event-list">
-            <li class="event-card">
-              <img
-                src="./assets/img/img-event01.jpg"
-                alt="入学式"
-                class="event-img"
-              />
-              <div class="event-contents">
-                <p class="event-date">May</p>
-                <p class="event-title">入学式</p>
-              </div>
-            </li>
-            <li class="event-card">
-              <img
-                src="./assets/img/img-event02.jpg"
-                alt="ハッカソン"
-                class="event-img"
-              />
-              <div class="event-contents">
-                <p class="event-date">June</p>
-                <p class="event-title">ハッカソン</p>
-              </div>
-            </li>
-            <li class="event-card">
-              <img
-                src="./assets/img/img-event03.jpg"
-                alt="課題サポート会"
-                class="event-img"
-              />
-              <div class="event-contents">
-                <p class="event-date">May</p>
-                <p class="event-title">課題サポート会</p>
-              </div>
-            </li>
-            <li class="event-card">
-              <img
-                src="./assets/img/img-event04.jpg"
-                alt="チーム開発"
-                class="event-img"
-              />
-              <div class="event-contents">
-                <p class="event-date">March-May</p>
-                <p class="event-title">チーム開発</p>
-              </div>
-            </li>
-          </ul>
-        </div>
+        <section class="splide" id="slider1">
+          <div class="splide__track">
+            <ul class="splide__list">
+              <li class="event-card splide__slide">
+                <img
+                  src="./assets/img/img-event01.jpg"
+                  alt="入学式"
+                  class="event-img"
+                />
+                <div class="event-contents">
+                  <p class="event-date">May</p>
+                  <p class="event-title">入学式</p>
+                </div>
+              </li>
+              <li class="event-card splide__slide">
+                <img
+                  src="./assets/img/img-event02.jpg"
+                  alt="ハッカソン"
+                  class="event-img"
+                />
+                <div class="event-contents">
+                  <p class="event-date">June</p>
+                  <p class="event-title">ハッカソン</p>
+                </div>
+              </li>
+              <li class="event-card splide__slide">
+                <img
+                  src="./assets/img/img-event03.jpg"
+                  alt="課題サポート会"
+                  class="event-img"
+                />
+                <div class="event-contents">
+                  <p class="event-date">May</p>
+                  <p class="event-title">課題サポート会</p>
+                </div>
+              </li>
+              <li class="event-card splide__slide">
+                <img
+                  src="./assets/img/img-event04.jpg"
+                  alt="チーム開発"
+                  class="event-img"
+                />
+                <div class="event-contents">
+                  <p class="event-date">March-May</p>
+                  <p class="event-title">チーム開発</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </section>
       </section>
       <section>
         <div class="Daily">
@@ -180,57 +193,62 @@
             それとは別に同期のみの班を構成して共に学習するようなシステムを採用しています。
           </p>
         </div>
-        <div class="Daily-list-container">
-          <ul class="Daily-list-ul">
-            <li class="Daily-list">
-              <div class="Daily-text">
-                <div class="Daily-title">
-                  <h1 class="list-num">01</h1>
-                  <h1 class="list-title">ミートアップ</h1>
+        <section class="splide" id="slider2">
+          <div class="Daily-list-container splide__track">
+            <ul class="Daily-list-ul splide__list">
+              <li class="Daily-list splide__slide">
+                <div class="Daily-text">
+                  <div class="Daily-title">
+                    <h1 class="list-num">01</h1>
+                    <h1 class="list-title">ミートアップ</h1>
+                  </div>
+                  <ul>
+                    <li class="list-contents">毎週月曜日 19:30 ～ 22:30</li>
+                    <li class="list-contents">全員参加</li>
+                  </ul>
+                  <div class="Daily-contents">
+                    全体ミーティングです。<br />各局からのお知らせや、講演会など目白押しです。
+                  </div>
                 </div>
-                <ul>
-                  <li class="list-contents">毎週月曜日 19:30 ～ 22:30</li>
-                  <li class="list-contents">全員参加</li>
-                </ul>
-                <div class="Daily-contents">
-                  全体ミーティングです。<br />各局からのお知らせや、講演会など目白押しです。
+                <img src="./assets/img/img-daily01.jpg" class="Daily-photo" />
+              </li>
+              <li class="re-Daily-list splide__slide">
+                <div class="Daily-text">
+                  <div class="Daily-title">
+                    <h1 class="list-num">02</h1>
+                    <h1 class="list-title">縦もく</h1>
+                  </div>
+                  <ul>
+                    <li class="list-contents">週 1 回 2 時間</li>
+                  </ul>
+                  <div class="Daily-contents">
+                    zoom を繋ぎ、わからないところを先輩に質問できます。<br />わかるまで丁寧に教えてくれます。
+                  </div>
                 </div>
-              </div>
-              <img src="./assets/img/img-daily01.jpg" class="Daily-photo" />
-            </li>
-            <li class="re-Daily-list">
-              <div class="Daily-text">
-                <div class="Daily-title">
-                  <h1 class="list-num">02</h1>
-                  <h1 class="list-title">縦もく</h1>
+                <img
+                  src="./assets/img/img-daily02.jpg"
+                  class="re-Daily-photo"
+                />
+              </li>
+              <li class="Daily-list splide__list">
+                <div class="Daily-text">
+                  <div class="Daily-title">
+                    <h1 class="list-num">03</h1>
+                    <h1 class="list-title">横もく</h1>
+                  </div>
+                  <ul>
+                    <li class="list-contents">週 1 回 3 時間</li>
+                  </ul>
+                  <div class="Daily-contents">
+                    同期と 3 ～ 4
+                    人一組で学習しながら、わからないところを共有、質問できます。オフラインで集合したり、共にハッカソンに挑んだりします。
+                  </div>
                 </div>
-                <ul>
-                  <li class="list-contents">週 1 回 2 時間</li>
-                </ul>
-                <div class="Daily-contents">
-                  zoom を繋ぎ、わからないところを先輩に質問できます。<br />わかるまで丁寧に教えてくれます。
-                </div>
-              </div>
-              <img src="./assets/img/img-daily02.jpg" class="re-Daily-photo" />
-            </li>
-            <li class="Daily-list">
-              <div class="Daily-text">
-                <div class="Daily-title">
-                  <h1 class="list-num">03</h1>
-                  <h1 class="list-title">横もく</h1>
-                </div>
-                <ul>
-                  <li class="list-contents">週 1 回 3 時間</li>
-                </ul>
-                <div class="Daily-contents">
-                  同期と 3 ～ 4
-                  人一組で学習しながら、わからないところを共有、質問できます。オフラインで集合したり、共にハッカソンに挑んだりします。
-                </div>
-              </div>
-              <img src="./assets/img/img-daily03.jpg" class="Daily-photo" />
-            </li>
-          </ul>
-        </div>
+                <img src="./assets/img/img-daily03.jpg" class="Daily-photo" />
+              </li>
+            </ul>
+          </div>
+        </section>
       </section>
     </main>
     <div id="test"></div>

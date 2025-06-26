@@ -49,9 +49,9 @@
   */
 .nav {
   background-color: #f7f9fb;
-  z-index: 100;
+  z-index: 1200;
   height: 100%;
-  position: absolute;
+  position: fixed;
   display: flex;
   flex-direction: column;
   left: 0;
@@ -77,13 +77,12 @@
   flex-direction: column;
 }
 .main-header {
-  margin: 24px;
-  padding: 0px;
+  padding: 8px;
 }
 .main-logo {
   width: 100px;
   height: auto;
-  z-index: 200;
+  z-index: 1300;
 }
 .hamburger {
   display: block;
@@ -128,8 +127,9 @@
   width: 30px;
   height: 2px;
   background-color: #0071bc;
-  display: grid;
+  display: block;
   margin: 6px;
+  transition: all 0.3s linear;
 }
 .line1 {
   top: 13px;
@@ -140,6 +140,19 @@
 .line3 {
   top: 27px;
 }
+.no-scroll {
+  overflow: hidden;
+}
+.main-header.is-open .line1 {
+  transform: rotate(45deg) translate(5.5px, 5.5px);
+}
+.main-header.is-open .line2 {
+  opacity: 0;
+}
+.main-header.is-open .line3 {
+  transform: rotate(-45deg) translate(5.5px, -5.5px);
+}
+
 /**
   * 2.2 - フッター
   */
@@ -150,7 +163,6 @@
 .main {
   height: 375px;
   background-image: url(../../img/sp/bg-mainvisual.jpg);
-  overflow: hidden;
 }
 .main > section {
   padding: 8px;
@@ -215,7 +227,6 @@
   padding-right: 30px;
 }
 .event {
-  overflow: scroll;
 }
 /**
   * 2.6 - 日常生活
@@ -289,7 +300,6 @@
   display: block;
 }
 .Daily-list-container {
-  overflow-x: auto;
   width: 100%;
 }
 /**

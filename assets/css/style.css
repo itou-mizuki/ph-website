@@ -60,13 +60,23 @@ body {
 /**
  * 2.1 - ヘッダー
  */
+
 .main-header {
   display: flex;
   align-items: center; /* 垂直方向に中央揃え */
   justify-content: space-between; /* ロゴとnavを両端に配置 */
   padding-left: 24px;
   padding-right: 24px;
+  background-color: #ffffff;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  right: 0;
+  transition-duration: 0.3s;
+  transition-timing-function: linear;
 }
+
 .nav {
   display: flex;
 }
@@ -100,6 +110,7 @@ body {
 }
 .hamburger {
   display: none;
+  z-index: 1300;
 }
 .foot-h {
   display: none;
@@ -232,18 +243,16 @@ body {
 /**
  * 2.5 - イベント
  */
+.event {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .lead {
   font-size: 14px;
   line-height: 180%;
   margin-top: 10px;
   text-align: center;
-}
-.event-list {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-}
-.event-card {
-  margin: 20px;
 }
 .event-contents {
   background-color: #f7f9fb;
@@ -431,7 +440,13 @@ body {
 /**
  * 3.1 - フェードイン
  */
-
+.main-header-clear {
+  background-color: rgba(255, 255, 255, 0);
+  filter: brightness(10);
+}
+.splide__track {
+  overflow: visible !important;
+}
 /**
  * 3.2 - スライダー
  */
